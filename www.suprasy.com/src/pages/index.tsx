@@ -24,7 +24,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <nav aria-label="Global">
           <ul className="flex items-center gap-6 text-sm">
             <li>
-              <a className="text-gray-500 transition hover:text-gray-500/75" href="#"> About </a>
+              <a className="text-gray-500 transition hover:text-gray-500/75" href="#"> About FF</a>
             </li>
 
             <li>
