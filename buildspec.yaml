@@ -15,6 +15,5 @@ phases:
       - npm run build
   post_build:
     commands:
-      - cd www.suprasy.com
       - CLOUDFLARE_ACCOUNT_ID=${CLOUDFLARE_ACCOUNT_ID} CLOUDFLARE_API_TOKEN=${CLOUDFLARE_API_TOKEN} wrangler pages deploy ./public --project-name=www-develop-suprasy-com --branch=main --commit-dirty=true
 
