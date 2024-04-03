@@ -9,7 +9,7 @@ phases:
   pre_build:
     commands:
       - cd www.suprasy.com
-      - npm install
+      - npm install --force
   build:
     commands:
       - npm run build
