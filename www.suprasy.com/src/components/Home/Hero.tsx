@@ -1,5 +1,6 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
+import { Button } from '@/components/ui/button';
 
 const Hero: React.FC = () => {
   return (
@@ -18,12 +19,12 @@ const Hero: React.FC = () => {
           quickly create any website with this starter.
         </p>
         <div className="mt-6 flex flex-col sm:flex-row gap-3">
-          <a href="#" rel="noopener">
-            Get Started
-          </a>
-          <a rel="noopener" href="https://github.com/surjithctly/astroship">
-            View Repo
-          </a>
+          <Button variant={'outline'}>
+            <a href="/">View Pricing</a>
+          </Button>
+          <Button variant={'default'}>
+            <a href="/">Sign Up</a>
+          </Button>
         </div>
       </div>
     </main>
