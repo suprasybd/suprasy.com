@@ -2,7 +2,7 @@
   "name": "www.suprasy.com",
   "version": "1.0.0",
   "private": true,
-  "description": "",
+  "description": "www.suprasy.com",
   "author": "Alvee",
   "keywords": [
     "gatsby"
@@ -16,12 +16,9 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@mdx-js/react": "^3.0.1",
     "autoprefixer": "^10.4.19",
     "gatsby": "^5.13.3",
     "gatsby-plugin-image": "^3.13.1",
-    "gatsby-plugin-manifest": "^5.13.1",
-    "gatsby-plugin-mdx": "^5.13.1",
     "gatsby-plugin-postcss": "^6.13.1",
     "gatsby-plugin-sharp": "^5.13.1",
     "gatsby-plugin-sitemap": "^6.13.1",
@@ -36,6 +33,7 @@
     "@types/node": "^20.11.19",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
+    "prettier": "3.2.5",
     "typescript": "^5.3.3"
   }
 }
