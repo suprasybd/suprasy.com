@@ -1,6 +1,7 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'gatsby';
 
 const Hero: React.FC = () => {
   return (
@@ -22,10 +23,10 @@ const Hero: React.FC = () => {
         </p>
         <div className="mt-6 flex flex-col sm:flex-row gap-3">
           <Button variant={'outline'}>
-            <a href="/">View Pricing</a>
+            <Link to="/pricing">View Pricing</Link>
           </Button>
           <Button variant={'default'}>
-            <a href="/">Sign Up</a>
+            <Link to="https://dashboard.suprasy.com/register">Sign Up</Link>
           </Button>
         </div>
       </div>

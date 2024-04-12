@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React from 'react';
 
 const Footer: React.FC = () => {
@@ -38,18 +39,25 @@ const Footer: React.FC = () => {
                   />
                 </svg>
               </div>
-              <a className="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase">
-                About
-              </a>
-              <a className="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase">
-                Services
-              </a>
-              <a className="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase">
-                Why us
-              </a>
-              <a className="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase">
-                Contact
-              </a>
+              <Link
+                to="/product"
+                className="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase"
+              >
+                Product
+              </Link>
+              <Link
+                to="/whyus"
+                className="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase"
+              >
+                Why Suprasy
+              </Link>
+              <Link
+                to="/pricing"
+                className="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase"
+              >
+                Pricing
+              </Link>
+
               <div className="flex flex-row space-x-8 items-center justify-between">
                 <a>
                   <svg
@@ -87,7 +95,7 @@ const Footer: React.FC = () => {
                     />
                   </svg>
                 </a>
-                <a href="https://www.youtube.com/channel/UCjtCbnkIaiCJgj13sEZ9iqw">
+                <a href="">
                   <svg
                     width="13"
                     height="9"
