@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
             <Link to="/pricing">View Pricing</Link>
           </Button>
           <Button variant={'default'}>
-            <Link to="https://dashboard.suprasy.com/register">Sign Up</Link>
+            <Link to="https://dash.suprasy.com/register">Sign Up</Link>
           </Button>
         </div>
       </div>

@@ -17,9 +17,7 @@ const ProductPage = () => {
               our powerful ecommerce builder.
             </p>
             <button className="mt-8 inline-block bg-white text-indigo-600 py-3 px-8 rounded-full shadow-md hover:bg-indigo-700 hover:text-white transition duration-300 ease-in-out">
-              <Link to="https://dashboard.suprasy.com/register">
-                Get Started
-              </Link>
+              <Link to="https://dash.suprasy.com/register">Get Started</Link>
             </button>
           </div>
         </section>
@@ -254,9 +252,7 @@ const ProductPage = () => {
               Sign up now and take your online business to new heights!
             </p>
             <button className="inline-block bg-white text-indigo-600 py-3 px-8 rounded-full shadow-md hover:bg-indigo-700 hover:text-white transition duration-300 ease-in-out">
-              <Link to="https://dashboard.suprasy.com/register">
-                Sign Up Now
-              </Link>
+              <Link to="https://dash.suprasy.com/register">Sign Up Now</Link>
             </button>
           </div>
         </section>

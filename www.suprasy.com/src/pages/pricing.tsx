@@ -68,7 +68,7 @@ const PricingPage = () => {
             </div>
             <a
               className="bg-emerald-50 text-emerald-700 hover:bg-emerald-100 mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium"
-              href="https://dashboard.suprasy.com/register"
+              href="https://dash.suprasy.com/register"
             >
               Start Free Trial
             </a>
@@ -145,7 +145,7 @@ const PricingPage = () => {
             </div>
             <a
               className="bg-emerald-500 text-white  hover:bg-emerald-600 mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium"
-              href="https://dashboard.suprasy.com/register"
+              href="https://dash.suprasy.com/register"
             >
               Start Free Trial
             </a>

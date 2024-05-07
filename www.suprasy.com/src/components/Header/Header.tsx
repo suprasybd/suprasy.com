@@ -18,11 +18,11 @@ const Header: React.FC = () => {
             </div>
 
             <Button variant={'default'}>
-              <Link to="https://dashboard.suprasy.com/register">Register</Link>
+              <Link to="https://dash.suprasy.com/register">Register</Link>
             </Button>
 
             <Button variant={'link'}>
-              <a href="https://dashboard.suprasy.com/login">Login</a>
+              <a href="https://dash.suprasy.com/login">Login</a>
             </Button>
             <button
               data-collapse-toggle="mobile-menu-2"
