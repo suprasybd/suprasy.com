@@ -13,7 +13,7 @@ const Footer = () => {
                 <a href="/#" className="mb-6 inline-block max-w-[160px]">
                   <StaticImage
                     className="max-w-full left-[-10px]"
-                    src="../../images/lg-full.png"
+                    src="../../images/lg-full-blacks.png"
                     alt="footer logo full"
                   />
                 </a>
