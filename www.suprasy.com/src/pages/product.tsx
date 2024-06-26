@@ -5,9 +5,9 @@ import React from 'react';
 const ProductPage = () => {
   return (
     <Layout>
-      <div className="bg-white">
+      <div className="bg-white my-10">
         {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-indigo-600 to-indigo-400">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-indigo-600 to-indigo-400 rounded-3xl">
           <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-4xl sm:text-5xl font-extrabold text-white leading-tight">
               Build Your Dream Store Today
@@ -243,7 +243,7 @@ const ProductPage = () => {
         </section>
 
         {/* Call to Action Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-indigo-600 to-indigo-400">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-indigo-600 to-indigo-400 rounded-3xl">
           <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
               Ready to Get Started?
