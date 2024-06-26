@@ -5,9 +5,9 @@ import React from 'react';
 const WhySuprasyPage = () => {
   return (
     <Layout>
-      <div className="bg-white">
+      <div className="bg-white my-10">
         {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-indigo-600 to-indigo-400">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-indigo-600 to-indigo-400 rounded-3xl">
           <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-4xl sm:text-5xl font-extrabold text-white leading-tight">
               Why Choose Suprasy?
@@ -34,11 +34,11 @@ const WhySuprasyPage = () => {
                   everything you need to succeed.
                 </p>
               </div>
-              <div className="flex justify-center items-center">
+              <div className="flex justify-center items-center ">
                 <StaticImage
                   src="../images/why/a.jpg"
                   alt="Advanced Features"
-                  className="w-full max-w-md"
+                  className="w-full max-w-md rounded-3xl"
                 ></StaticImage>
               </div>
             </div>
@@ -46,14 +46,14 @@ const WhySuprasyPage = () => {
         </section>
 
         {/* Section 2: Seamless Integration */}
-        <section className="py-20 bg-gray-100">
+        <section className="py-20 bg-gray-100 rounded-3xl">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               <div className="flex justify-center items-center">
                 <StaticImage
                   src="../images/why/b.jpg"
                   alt="Advanced Features"
-                  className="w-full max-w-md"
+                  className="w-full max-w-md rounded-3xl"
                 ></StaticImage>
               </div>
               <div>
@@ -89,7 +89,7 @@ const WhySuprasyPage = () => {
                 <StaticImage
                   src="../images/why/c.jpg"
                   alt="Advanced Features"
-                  className="w-full max-w-md"
+                  className="w-full max-w-md rounded-3xl"
                 ></StaticImage>
               </div>
             </div>
@@ -97,14 +97,14 @@ const WhySuprasyPage = () => {
         </section>
 
         {/* Section 4: Secure Transactions */}
-        <section className="py-20 bg-gray-100">
+        <section className="py-20 bg-gray-100 rounded-3xl">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               <div className="flex justify-center items-center">
                 <StaticImage
                   src="../images/why/d.jpg"
                   alt="Advanced Features"
-                  className="w-full max-w-md"
+                  className="w-full max-w-md rounded-3xl"
                 ></StaticImage>
               </div>
               <div>
@@ -140,7 +140,7 @@ const WhySuprasyPage = () => {
                 <StaticImage
                   src="../images/why/e.jpg"
                   alt="Advanced Features"
-                  className="w-full max-w-md"
+                  className="w-full max-w-md rounded-3xl"
                 ></StaticImage>
               </div>
             </div>
