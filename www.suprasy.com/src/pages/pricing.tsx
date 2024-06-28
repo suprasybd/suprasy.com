@@ -13,7 +13,7 @@ const PricingPage = () => {
             Choose a plan that suits your online store's needs.
           </p>
         </div>
-        <div className="mt-24 container space-y-12 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-8">
+        <div className="mt-10 container space-y-12 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-8">
           <div className="relative p-8  border border-gray-200 rounded-2xl shadow-sm flex flex-col">
             <div className="flex-1">
               <h3 className="text-xl font-semibold ">Startup Plan</h3>
@@ -87,6 +87,43 @@ const PricingPage = () => {
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                   <span className="ml-3 ">Unlimited Customers</span>
+                </li>
+
+                <li className="flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="flex-shrink-0 w-6 h-6 text-emerald-500"
+                    aria-hidden="true"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span className="ml-3 ">Custom Domain</span>
+                </li>
+                <li className="flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="flex-shrink-0 w-6 h-6 text-emerald-500"
+                    aria-hidden="true"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span className="ml-3 ">Free Subdomain</span>
                 </li>
 
                 <li className="flex">
