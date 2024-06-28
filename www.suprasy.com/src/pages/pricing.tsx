@@ -23,7 +23,7 @@ const PricingPage = () => {
                 </span>
                 <span className="ml-1 text-xl font-semibold">/month</span>
               </p>
-              <b>for each store</b>
+              <b>for each website/store</b>
               <p className="mt-6 ">
                 Perfect for individuals and small businesses getting started
                 with their ecommerce journey.{' '}
@@ -125,7 +125,7 @@ const PricingPage = () => {
                 </span>
                 <span className="ml-1 text-xl font-semibold">/month</span>
               </p>
-              <b>for each store</b>
+              <b>for each website/store</b>
               <p className="mt-6 ">
                 <b>You can not directly purchase the enterprise plan,</b> you
                 will be automaticlly converted to this plan if you are exceding
