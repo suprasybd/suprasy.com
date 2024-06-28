@@ -16,75 +16,22 @@ const PricingPage = () => {
         <div className="mt-24 container space-y-12 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-8">
           <div className="relative p-8  border border-gray-200 rounded-2xl shadow-sm flex flex-col">
             <div className="flex-1">
-              <h3 className="text-xl font-semibold ">Starter Plan</h3>
+              <h3 className="text-xl font-semibold ">Startup Plan</h3>
               <p className="mt-4 flex items-baseline ">
                 <span className="text-5xl font-extrabold tracking-tight">
-                  $10
+                  BDT 500
                 </span>
                 <span className="ml-1 text-xl font-semibold">/month</span>
               </p>
+              <b>for each store</b>
               <p className="mt-6 ">
                 Perfect for individuals and small businesses getting started
-                with their ecommerce journey.
-              </p>
-              <ul role="list" className="mt-6 space-y-6">
-                <li className="flex">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="flex-shrink-0 w-6 h-6 text-emerald-500"
-                    aria-hidden="true"
-                  >
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span className="ml-3 ">10 Products</span>
-                </li>
-                <li className="flex">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="flex-shrink-0 w-6 h-6 text-emerald-500"
-                    aria-hidden="true"
-                  >
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span className="ml-3 ">Basic Support</span>
-                </li>
-              </ul>
-            </div>
-            <a
-              className="bg-emerald-50 text-emerald-700 hover:bg-emerald-100 mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium"
-              href="https://dash.suprasy.com/register"
-            >
-              Start Free Trial
-            </a>
-          </div>
-          <div className="relative p-8  border border-gray-200 rounded-2xl shadow-sm flex flex-col">
-            <div className="flex-1">
-              <h3 className="text-xl font-semibold ">Business Plan</h3>
-              <p className="mt-4 flex items-baseline ">
-                <span className="text-5xl font-extrabold tracking-tight">
-                  $20
-                </span>
-                <span className="ml-1 text-xl font-semibold">/month</span>
-              </p>
-              <p className="mt-6 ">
-                Ideal for growing businesses that need more features and
-                support.
+                with their ecommerce journey.{' '}
+                <u>
+                  <b>Sign up is free,</b> you will only be asked for payment
+                  when creating a store from the dashboard.
+                </u>
+                <b>You can create multiple stores from a single account.</b>
               </p>
               <ul role="list" className="mt-6 space-y-6">
                 <li className="flex">
@@ -121,7 +68,7 @@ const PricingPage = () => {
                   >
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
-                  <span className="ml-3 ">Priority Support (24/7)</span>
+                  <span className="ml-3 ">Unlimited Sales</span>
                 </li>
                 <li className="flex">
                   <svg
@@ -139,7 +86,26 @@ const PricingPage = () => {
                   >
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
-                  <span className="ml-3 ">Advanced Analytics</span>
+                  <span className="ml-3 ">Unlimited Customers</span>
+                </li>
+
+                <li className="flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="flex-shrink-0 w-6 h-6 text-emerald-500"
+                    aria-hidden="true"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span className="ml-3 ">Premium Support</span>
                 </li>
               </ul>
             </div>
@@ -147,8 +113,71 @@ const PricingPage = () => {
               className="bg-emerald-500 text-white  hover:bg-emerald-600 mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium"
               href="https://dash.suprasy.com/register"
             >
-              Start Free Trial
+              Sign Up For Free
             </a>
+          </div>
+          <div className="relative p-8  border border-gray-200 rounded-2xl shadow-sm flex flex-col">
+            <div className="flex-1">
+              <h3 className="text-xl font-semibold ">Enterprise Plan</h3>
+              <p className="mt-4 flex items-baseline ">
+                <span className="text-5xl font-extrabold tracking-tight">
+                  BDT 500 + Usage
+                </span>
+                <span className="ml-1 text-xl font-semibold">/month</span>
+              </p>
+              <b>for each store</b>
+              <p className="mt-6 ">
+                <b>You can not directly purchase the enterprise plan,</b> you
+                will be automaticlly converted to this plan if you are exceding
+                more traffic then the startup plan which is very rare and you
+                shouldn't be worrying about it untill you have very high traffic
+                and visitors.
+              </p>
+              <ul role="list" className="mt-6 space-y-6">
+                <li className="flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="flex-shrink-0 w-6 h-6 text-emerald-500"
+                    aria-hidden="true"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span className="ml-3 ">All Startup Features</span>
+                </li>
+                <li className="flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="flex-shrink-0 w-6 h-6 text-emerald-500"
+                    aria-hidden="true"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span className="ml-3 ">Priority Call Support (24/7)</span>
+                </li>
+              </ul>
+            </div>
+            {/* <a
+              className="bg-emerald-500 text-white  hover:bg-emerald-600 mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium"
+              href="https://dash.suprasy.com/register"
+            >
+              Contact Us
+            </a> */}
           </div>
         </div>
       </div>
