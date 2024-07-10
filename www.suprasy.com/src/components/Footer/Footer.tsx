@@ -30,7 +30,7 @@ const Footer = () => {
             </LinkGroup>
 
             <LinkGroup header="Helpful Links">
-              <NavLink link="/product" label="Sitemap" />
+              <NavLink link="/sitemap.xml" label="Sitemap" />
               <NavLink link="/product" label="Terms & Condition" />
               <NavLink link="/pricing" label="Cookie Policy" />
               <NavLink link="/whyus" label="Privacy Policy" />
