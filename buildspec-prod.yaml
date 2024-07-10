@@ -13,6 +13,7 @@ phases:
   build:
     commands:
       - npm run build
+      - cp ./public/sitemap-0.xml ./public/sitemap.xml
   post_build:
     commands:
       - CLOUDFLARE_ACCOUNT_ID=${CLOUDFLARE_ACCOUNT_ID} CLOUDFLARE_API_TOKEN=${CLOUDFLARE_API_TOKEN} wrangler pages deploy ./public --project-name=suprasy-com --branch=main --commit-dirty=true
