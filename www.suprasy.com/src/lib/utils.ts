@@ -5,4 +5,4 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export const DASHBOARD = `http://dash.${window.location.hostname}`;
+export const DASHBOARD = `http://dash.suprasy.com`;
