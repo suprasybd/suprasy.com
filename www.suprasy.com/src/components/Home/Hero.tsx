@@ -2,6 +2,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'gatsby';
+import { DASHBOARD } from '@/lib/utils';
 
 const Hero: React.FC = () => {
   return (
@@ -26,7 +27,7 @@ const Hero: React.FC = () => {
             <Link to="/pricing">View Pricing</Link>
           </Button>
           <Button variant={'default'}>
-            <Link to="https://dash.suprasy.com/register">Sign Up</Link>
+            <Link to={`${DASHBOARD}/register`}>Sign Up</Link>
           </Button>
         </div>
       </div>

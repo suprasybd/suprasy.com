@@ -2,6 +2,8 @@ import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import { Button } from '../ui/button';
 import { Link } from 'gatsby';
+import { DASHBOARD } from '@/lib/utils';
+
 const Header: React.FC = () => {
   return (
     <header>
@@ -18,11 +20,11 @@ const Header: React.FC = () => {
             </div>
 
             <Button variant={'default'}>
-              <Link to="https://dash.suprasy.com/register">Register</Link>
+              <Link to={`${DASHBOARD}/register`}>Register</Link>
             </Button>
 
             <Button variant={'link'}>
-              <a href="https://dash.suprasy.com/login">Login</a>
+              <a href={`${DASHBOARD}/login`}>Login</a>
             </Button>
             <button
               data-collapse-toggle="mobile-menu-2"
