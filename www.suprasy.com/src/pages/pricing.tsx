@@ -1,8 +1,10 @@
 import Layout from '@/components/layout/Layout';
 import FaqPricing from '@/components/Pricing/Faq';
+import { useHostname } from '../hooks/HostnameHook';
 import React from 'react';
 
 const PricingPage = () => {
+  const [hostName] = useHostname();
   return (
     <Layout>
       <div className="mb-52">
@@ -47,12 +49,14 @@ const PricingPage = () => {
                 <PricingPoint>Premium Support</PricingPoint>
               </ul>
             </div>
-            <a
-              className="bg-emerald-500 text-white  hover:bg-emerald-600 mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium"
-              href="https://dash.suprasy.com/register"
-            >
-              Sign Up For Free
-            </a>
+            {hostName && (
+              <a
+                className="bg-emerald-500 text-white  hover:bg-emerald-600 mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium"
+                href={`${hostName}/register`}
+              >
+                Sign Up For Free
+              </a>
+            )}
           </div>
           <div className="relative p-8  border border-gray-200 rounded-2xl shadow-sm flex flex-col">
             <div className="flex-1">

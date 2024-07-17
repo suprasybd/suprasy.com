@@ -3,8 +3,10 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'gatsby';
 import { DASHBOARD } from '@/lib/utils';
+import { useHostname } from '../../hooks/HostnameHook';
 
 const Hero: React.FC = () => {
+  const [hostName] = useHostname();
   return (
     <main className="grid lg:grid-cols-2 p-8 md:p-0 place-items-center pt-16 pb-8 md:pt-8">
       <div className="py-6 md:order-1 hidden md:block">
@@ -27,7 +29,7 @@ const Hero: React.FC = () => {
             <Link to="/pricing">View Pricing</Link>
           </Button>
           <Button variant={'default'}>
-            <Link to={`${DASHBOARD}/register`}>Sign Up</Link>
+            {hostName && <a href={`${hostName}/register`}>Sign Up</a>}
           </Button>
         </div>
       </div>

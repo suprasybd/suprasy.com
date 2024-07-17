@@ -1,10 +1,13 @@
 import { StaticImage } from 'gatsby-plugin-image';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Button } from '../ui/button';
+
+import { useHostname } from '../../hooks/HostnameHook';
 import { Link } from 'gatsby';
-import { DASHBOARD } from '@/lib/utils';
 
 const Header: React.FC = () => {
+  const [hostName] = useHostname();
+  ``;
   return (
     <header>
       <nav className="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
@@ -20,11 +23,11 @@ const Header: React.FC = () => {
             </div>
 
             <Button variant={'default'}>
-              <Link to={`${DASHBOARD}/register`}>Register</Link>
+              {hostName && <a href={`${hostName}/register`}>Register</a>}
             </Button>
 
             <Button variant={'link'}>
-              <a href={`${DASHBOARD}/login`}>Login</a>
+              {hostName && <a href={`${hostName}/login`}>Login</a>}
             </Button>
             <button
               data-collapse-toggle="mobile-menu-2"
