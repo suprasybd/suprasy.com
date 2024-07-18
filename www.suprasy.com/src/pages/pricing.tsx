@@ -28,8 +28,7 @@ const PricingPage = () => {
               </p>
               <b>for each website/store</b>
               <p className="mt-6 ">
-                Perfect for individuals and small businesses getting started
-                with their ecommerce journey.{' '}
+                Perfect for businesses having medium to high traffic.
                 <u>
                   <b>Sign up is free,</b> you will only be asked for payment
                   when creating a store from the dashboard.
@@ -69,15 +68,12 @@ const PricingPage = () => {
               </p>
               <b>for each website/store</b>
               <p className="mt-6 ">
-                <b>You can not directly purchase the enterprise plan,</b> you
-                will be automaticlly converted to this plan if you are exceding
-                more traffic then the startup plan which is very rare and you
-                shouldn't be worrying about it untill you have very high traffic
-                and visitors.
+                <b>You are more then a startup!,</b> It's time to be our
+                enterprise member, please contact us for moving into enterprise.
               </p>
               <ul role="list" className="mt-6 space-y-6">
                 <PricingPoint> All Startup Features</PricingPoint>
-
+                <PricingPoint> Developer Support</PricingPoint>
                 <PricingPoint>Priority Call Support (24/7)</PricingPoint>
               </ul>
             </div>
