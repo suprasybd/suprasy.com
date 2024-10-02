@@ -17,25 +17,40 @@ const Footer = () => {
                     alt="footer logo full"
                   />
                 </a>
-                <p className="mb-7 text-base text-body-color dark:text-dark-6">
-                  With Suprasy's power, every sale flourishes, making your
-                  eCommerce dreams come true every hour, every day.
+
+                <p>
+                  <span className="font-bold">Trade License:</span>{' '}
+                  <span className="">TRAD/DSCC/000056/2024</span>
+                </p>
+                <p className="mt-3">
+                  48/A-B, Purana Paltan, Baitul Khair Building, 12th Floor,
+                  Purana Paltan Dhaka-1000
                 </p>
               </div>
             </div>
             <LinkGroup header="Usefull Links">
+              <NavLink link="/about-us" label="About Us" />
               <NavLink link="/product" label="Product" />
               <NavLink link="/pricing" label="Pricing" />
-              <NavLink link="/whyus" label="About" />
+              <NavLink link="/whyus" label="Why Suprasy" />
+              <NavLink link="/sitemap.xml" label="Sitemap" />
             </LinkGroup>
 
             <LinkGroup header="Helpful Links">
-              <NavLink link="/sitemap.xml" label="Sitemap" />
-              <NavLink link="/product" label="Terms & Condition" />
-              <NavLink link="/pricing" label="Cookie Policy" />
-              <NavLink link="/whyus" label="Privacy Policy" />
+              <NavLink link="/terms-and-conditions" label="Terms & Condition" />
+              <NavLink link="/cookie-policy" label="Cookie Policy" />
+              <NavLink link="/delivery-policy" label="Delivery Policy" />
+              <NavLink link="/refund-policy" label="Refund Policy" />
+              <NavLink link="/privacy-policy" label="Privacy Policy" />
             </LinkGroup>
           </div>
+        </div>
+
+        <div className="flex justify-center items-center ">
+          <StaticImage
+            src="../../images/ssl.jpg"
+            alt="SSL Commerz"
+          ></StaticImage>
         </div>
 
         <div className="text-center p-3 rounded-md ">
