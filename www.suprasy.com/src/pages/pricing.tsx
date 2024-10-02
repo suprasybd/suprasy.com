@@ -22,7 +22,7 @@ const PricingPage = () => {
               <h3 className="text-xl font-semibold ">Startup Plan</h3>
               <p className="mt-4 flex items-baseline ">
                 <span className="text-5xl font-extrabold tracking-tight">
-                  BDT 1500
+                  BDT 500
                 </span>
                 <span className="ml-1 text-xl font-semibold">/month</span>
               </p>
@@ -30,8 +30,8 @@ const PricingPage = () => {
               <p className="mt-6 ">
                 Perfect for businesses having medium to high traffic.
                 <u>
-                  <b>Sign up is free,</b> you will only be asked for payment
-                  when creating a store from the dashboard.
+                  <b>Sign up is free,</b> you can create one store for 1 month
+                  trial period.
                 </u>
                 <b>You can create multiple stores from a single account.</b>
               </p>
@@ -53,7 +53,7 @@ const PricingPage = () => {
                 className="bg-emerald-500 text-white  hover:bg-emerald-600 mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium"
                 href={`${hostName}/register`}
               >
-                Sign Up For Free
+                Sign Up For Free (One Month Trial)
               </a>
             )}
           </div>
