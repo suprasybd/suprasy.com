@@ -70,7 +70,7 @@ const PLAN_INFO: Record<string, PlanInfo> = {
   free: {
     description:
       'Perfect for small businesses just starting their online journey. Try all basic features free for 30 days.',
-    highlight: '1 Month Free Trial',
+    highlight: 'Best Free Plan',
     recommended: false,
   },
   pro: {
