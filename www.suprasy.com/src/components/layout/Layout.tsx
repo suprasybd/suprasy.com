@@ -13,4 +13,5 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     </main>
   );
 };
+
 export default Layout;
