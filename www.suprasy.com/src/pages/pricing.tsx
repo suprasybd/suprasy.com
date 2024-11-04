@@ -42,7 +42,7 @@ const PricingPage = () => {
             Choose a plan that suits your online store's needs.
           </p>
         </div>
-        <div className="mt-10 container space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8">
+        <div className="mt-10 px-4 md:px-6 lg:px-8 max-w-[1400px] mx-auto space-y-12 lg:space-y-0 lg:grid lg:grid-cols-4 lg:gap-x-6">
           {plans.map((plan) => (
             <PricingCard key={plan.Id} plan={plan} hostName={hostName} />
           ))}
@@ -69,15 +69,21 @@ interface PlanInfo {
 const PLAN_INFO: Record<string, PlanInfo> = {
   free: {
     description:
-      'Perfect for small businesses just starting their online journey. Try all basic features free for 30 days.',
+      'Perfect for small businesses just starting their online journey. Try all basic features free.',
     highlight: 'Best Free Plan',
     recommended: false,
+  },
+  starter: {
+    description:
+      'Great for businesses looking to expand their online presence with additional features.',
+    highlight: 'Great Value',
+    recommended: true,
   },
   pro: {
     description:
       'Ideal for growing businesses ready to scale their online presence with advanced features.',
     highlight: 'Most Popular Choice',
-    recommended: true,
+    recommended: false,
   },
   enterprise: {
     description:
@@ -130,7 +136,7 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan, hostName }) => {
         <div className="mt-4">
           <p className="flex items-baseline">
             <span className="text-5xl font-extrabold tracking-tight">
-              {plan.MonthlyPrice === 0 ? 'Free' : `BDT ${plan.MonthlyPrice}`}
+              {plan.MonthlyPrice === 0 ? 'Free' : `৳${plan.MonthlyPrice}`}
             </span>
             {plan.MonthlyPrice > 0 && (
               <span className="ml-1 text-xl font-semibold text-gray-500">
@@ -163,7 +169,7 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan, hostName }) => {
             }`}
           href={`${hostName}/register`}
         >
-          {plan.MonthlyPrice === 0 ? 'Start Free Trial' : 'Get Started'}
+          {plan.MonthlyPrice === 0 ? 'Start Free' : 'Get Started'}
         </a>
       )}
       {isEnterprise && (
