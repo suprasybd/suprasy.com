@@ -2,7 +2,9 @@ const config = {
   api: {
     baseURL: process.env.GATSBY_API_URL || 'http://localhost:3000',
   },
-  // Add other config values here as needed
+  dashboard: {
+    baseURL: process.env.GATSBY_DASHBOARD_URL || 'http://dash.localhost:3000',
+  },
 };
 
 export default config;

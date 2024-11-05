@@ -7,8 +7,11 @@ export function cn(...inputs: ClassValue[]) {
 
 export const getHostName = () => {
   if (typeof window !== 'undefined') {
-    return window?.location?.hostname || document?.location?.hostname;
+    return process.env.GATSBY_DASHBOARD_URL || window?.location?.hostname
+      ? `http://dash.${window.location.hostname}`
+      : undefined;
   }
 };
 
-export const DASHBOARD = `http://dash.suprasy.com`;
+export const DASHBOARD =
+  process.env.GATSBY_DASHBOARD_URL || 'http://dash.localhost:3000';
