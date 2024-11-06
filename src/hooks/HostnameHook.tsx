@@ -7,7 +7,7 @@ export const useHostname = () => {
   useEffect(() => {
     const hName = getHostName();
     if (hName) {
-      setHostName(`http://dash.${hName}`);
+      setHostName(`${hName}`);
     }
   }, []);
   return [hostName];
