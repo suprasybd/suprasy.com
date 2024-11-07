@@ -21,12 +21,26 @@ const Header: React.FC = () => {
 
           {/* Desktop buttons */}
           <div className="hidden lg:flex gap-3 items-center lg:order-2">
-            <Button variant="ghost" className="rounded-xl hover:bg-gray-100/50">
-              {hostName && <a href={`${hostName}/login`}>Login</a>}
-            </Button>
-            <Button variant="default" className="rounded-xl shadow-sm">
-              {hostName && <a href={`${hostName}/register`}>Start Free</a>}
-            </Button>
+            {hostName && (
+              <>
+                <a href={`${hostName}/login`} className="w-full">
+                  <Button
+                    variant="ghost"
+                    className="rounded-xl hover:bg-gray-100/50 w-full"
+                  >
+                    Login
+                  </Button>
+                </a>
+                <a href={`${hostName}/register`} className="w-full">
+                  <Button
+                    variant="default"
+                    className="rounded-xl shadow-sm w-full"
+                  >
+                    Start Free
+                  </Button>
+                </a>
+              </>
+            )}
           </div>
 
           {/* Mobile menu button */}
@@ -157,20 +171,24 @@ const Header: React.FC = () => {
                   <div className="grid gap-3">
                     {hostName && (
                       <>
-                        <Button
-                          variant="default"
-                          className="w-full py-6 text-lg rounded-xl"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          <a href={`${hostName}/register`}>Start Free</a>
-                        </Button>
-                        <Button
-                          variant="ghost"
-                          className="w-full py-6 text-lg rounded-xl"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          <a href={`${hostName}/login`}>Login</a>
-                        </Button>
+                        <a href={`${hostName}/register`} className="w-full">
+                          <Button
+                            variant="default"
+                            className="w-full py-6 text-lg rounded-xl"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            Start Free
+                          </Button>
+                        </a>
+                        <a href={`${hostName}/login`} className="w-full">
+                          <Button
+                            variant="ghost"
+                            className="w-full py-6 text-lg rounded-xl"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            Login
+                          </Button>
+                        </a>
                       </>
                     )}
                   </div>
