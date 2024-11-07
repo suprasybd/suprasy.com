@@ -4,24 +4,145 @@ import Hero from '@/components/Home/Hero';
 import Layout from '@/components/layout/Layout';
 import { Features } from '@/components/Home/Features';
 import { ContainerScroll } from '@/components/ui/container-scroll-animation';
+import { Shield, Github, Palette } from 'lucide-react';
+import { Link } from 'gatsby';
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <Hero />
-      <ContainerScroll titleComponent={<ContainerScrollTitle />}>
-        <img src="https://static.suprasy.com/scroll-dashboard.png" />
-      </ContainerScroll>
+
+      {/* Updated ContainerScroll section */}
+      <div className="py-20">
+        <ContainerScroll titleComponent={<ContainerScrollTitle />}>
+          <div className="max-w-7xl mx-auto px-4">
+            <img
+              src="https://static.suprasy.com/scroll-dashboard.png"
+              alt="Dashboard Preview"
+              className="w-full rounded-2xl shadow-2xl"
+            />
+          </div>
+        </ContainerScroll>
+      </div>
+
       <Features />
+
+      {/* New Section: Security & Open Source */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+              Built with Security & Openness in Mind
+            </h2>
+            <p className="mt-4 text-lg text-gray-600">
+              We combine enterprise-grade security with open-source flexibility
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center mb-4">
+                <Shield className="w-6 h-6 text-indigo-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                Cloudflare Turnstile
+              </h3>
+              <p className="text-gray-600">
+                Enhanced security with Cloudflare Turnstile integration,
+                protecting your forms and checkout process without compromising
+                user experience.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center mb-4">
+                <Github className="w-6 h-6 text-indigo-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                Open Source Themes
+              </h3>
+              <p className="text-gray-600">
+                Access our growing collection of open-source themes or
+                contribute your own. Built by the community, for the community.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center mb-4">
+                <Palette className="w-6 h-6 text-indigo-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                Theme Customization
+              </h3>
+              <p className="text-gray-600">
+                Easily customize any theme to match your brand identity with our
+                intuitive theme editor and flexible design system.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link
+              to="/themes"
+              className="inline-flex items-center text-indigo-600 font-semibold hover:text-indigo-500"
+            >
+              Explore our theme collection
+              <svg
+                className="ml-2 w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced Call to Action */}
+      <section className="py-20 bg-gradient-to-r from-indigo-600 to-indigo-400 rounded-3xl mx-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-white sm:text-4xl mb-6">
+            Ready to Build Your Dream Store?
+          </h2>
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            Join thousands of successful businesses powered by Suprasy. Start
+            your journey today with our secure, flexible, and powerful ecommerce
+            platform.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="https://dash.suprasy.com/register"
+              className="inline-block bg-white text-indigo-600 px-8 py-3 rounded-full font-semibold hover:bg-indigo-50 transition-colors"
+            >
+              Get Started Free
+            </Link>
+            <Link
+              to="/themes"
+              className="inline-block bg-indigo-700 text-white px-8 py-3 rounded-full font-semibold hover:bg-indigo-800 transition-colors"
+            >
+              Explore Themes
+            </Link>
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 };
 
 const ContainerScrollTitle = () => {
   return (
-    <div>
-      <h1 className="text-3xl font-medium">Ecommerce at your fingertips</h1>
-      <h1 className="font-bold text-7xl">
+    <div className="max-w-3xl mx-auto text-center">
+      <h1 className="text-2xl font-medium text-gray-600 mb-4">
+        Ecommerce at your fingertips
+      </h1>
+      <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 leading-tight">
         Modern dashboard to manage your business
       </h1>
     </div>

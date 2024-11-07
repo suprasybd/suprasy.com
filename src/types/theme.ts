@@ -7,6 +7,8 @@ export interface Theme {
   Owner: string | null;
   R2FolderName: string;
   Type: string;
+  GithubLink?: string;
+  IsPremium?: boolean;
   CreatedAt: string;
   UpdatedAt: string;
 }
