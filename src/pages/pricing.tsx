@@ -41,6 +41,13 @@ const PricingPage = () => {
           <p className="max-w-3xl mx-auto mt-4 text-xl text-center">
             Choose a plan that suits your online store's needs.
           </p>
+          <p className="max-w-2xl mx-auto mt-4 text-sm text-center text-gray-600 bg-gray-50 p-4 rounded-lg">
+            We offer a generous free plan with core features because we believe
+            in helping businesses get started. If you find value in our
+            platform, please consider supporting our mission by upgrading to a
+            paid plan to help us continue providing and improving these
+            services.
+          </p>
         </div>
         <div className="mt-10 px-4 md:px-6 lg:px-8 max-w-[1400px] mx-auto space-y-12 lg:space-y-0 lg:grid lg:grid-cols-4 lg:gap-x-6">
           {plans.map((plan) => (
