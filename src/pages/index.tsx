@@ -4,7 +4,7 @@ import Hero from '@/components/Home/Hero';
 import Layout from '@/components/layout/Layout';
 import { Features } from '@/components/Home/Features';
 import { ContainerScroll } from '@/components/ui/container-scroll-animation';
-import { Shield, Github, Palette } from 'lucide-react';
+import { Shield, Github, Palette, ArrowRight } from 'lucide-react';
 import { Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
@@ -176,6 +176,66 @@ const IndexPage: React.FC<PageProps> = () => {
                 />
               </svg>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">
+              Open Source Themes
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Jump-start your store with our collection of open-source themes.
+              Use them as-is or as a foundation for your custom design.
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center">
+            <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-200 max-w-3xl w-full">
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center space-x-3">
+                  <Github className="w-8 h-8 text-gray-900" />
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    Suprasy Theme Collection
+                  </h3>
+                </div>
+                <a
+                  href="https://github.com/suprasybd/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-sm font-medium text-indigo-600 hover:text-indigo-500"
+                >
+                  View Repository
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </a>
+              </div>
+
+              <p className="text-gray-600 mb-6">
+                Access our growing collection of professionally designed themes.
+                Perfect for getting your store up and running quickly or
+                learning best practices for theme development.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="https://github.com/suprasybd/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-gray-900 hover:bg-gray-800"
+                >
+                  <Github className="w-5 h-5 mr-2" />
+                  Star on GitHub
+                </a>
+                <Link
+                  to="/themes"
+                  className="inline-flex items-center justify-center px-6 py-3 border border-gray-200 text-base font-medium rounded-full text-gray-900 bg-white hover:bg-gray-50"
+                >
+                  Browse Themes
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
