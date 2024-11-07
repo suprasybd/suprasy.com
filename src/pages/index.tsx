@@ -6,13 +6,89 @@ import { Features } from '@/components/Home/Features';
 import { ContainerScroll } from '@/components/ui/container-scroll-animation';
 import { Shield, Github, Palette } from 'lucide-react';
 import { Link } from 'gatsby';
+import { Helmet } from 'react-helmet';
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <Layout>
+      <Helmet>
+        <html lang="en" />
+        <title>
+          Suprasy - Build Your Professional Ecommerce Store | Open Source
+          Platform
+        </title>
+        <meta
+          name="description"
+          content="Create your professional ecommerce store with Suprasy. Enterprise-grade features, open-source themes, and global CDN. Start free and scale your online business."
+        />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://suprasy.com/" />
+        <meta
+          property="og:title"
+          content="Suprasy - Professional Ecommerce Platform"
+        />
+        <meta
+          property="og:description"
+          content="Build your dream store with Suprasy. Enterprise security, open-source flexibility, and powerful ecommerce features."
+        />
+        <meta
+          property="og:image"
+          content="https://static.suprasy.com/logo-nobg.png"
+        />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://suprasy.com/" />
+        <meta
+          name="twitter:title"
+          content="Suprasy - Professional Ecommerce Platform"
+        />
+        <meta
+          name="twitter:description"
+          content="Build your dream store with Suprasy. Enterprise security, open-source flexibility, and powerful ecommerce features."
+        />
+        <meta
+          name="twitter:image"
+          content="https://static.suprasy.com/logo-nobg.png"
+        />
+
+        {/* Additional SEO tags */}
+        <meta
+          name="keywords"
+          content="ecommerce platform, online store builder, open source ecommerce, professional ecommerce, secure ecommerce, cloudflare turnstile, custom themes"
+        />
+        <link rel="canonical" href="https://suprasy.com/" />
+
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              "name": "Suprasy",
+              "applicationCategory": "ECommerce Platform",
+              "operatingSystem": "Web",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+              },
+              "image": "https://static.suprasy.com/logo-nobg.png",
+              "description": "Professional ecommerce platform with enterprise-grade features, open-source themes, and global CDN delivery.",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "ratingCount": "1250"
+              }
+            }
+          `}
+        </script>
+      </Helmet>
+
       <Hero />
 
-      {/* Updated ContainerScroll section */}
       <div className="py-20">
         <ContainerScroll titleComponent={<ContainerScrollTitle />}>
           <div className="max-w-7xl mx-auto px-4">
@@ -27,7 +103,6 @@ const IndexPage: React.FC<PageProps> = () => {
 
       <Features />
 
-      {/* New Section: Security & Open Source */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -105,7 +180,6 @@ const IndexPage: React.FC<PageProps> = () => {
         </div>
       </section>
 
-      {/* Enhanced Call to Action */}
       <section className="py-20 bg-gradient-to-r from-indigo-600 to-indigo-400 rounded-3xl mx-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white sm:text-4xl mb-6">
@@ -150,5 +224,3 @@ const ContainerScrollTitle = () => {
 };
 
 export default IndexPage;
-
-export const Head: HeadFC = () => <title>Home Page</title>;

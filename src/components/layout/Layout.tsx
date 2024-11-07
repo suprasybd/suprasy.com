@@ -4,13 +4,13 @@ import Footer from '../Footer/Footer';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <main>
-      <div className="relative mx-auto lg:container lg:px-16 xl:px-20 h-fit">
-        <Header />
-        <main>{children}</main>
-        <Footer />
-      </div>
-    </main>
+    <>
+      <Header />
+      <main className="pt-24">
+        <div className="max-w-screen-xl mx-auto px-4">{children}</div>
+      </main>
+      <Footer />
+    </>
   );
 };
 

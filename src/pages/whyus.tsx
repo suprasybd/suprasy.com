@@ -7,8 +7,8 @@ import { Shield, Github, Palette } from 'lucide-react';
 const WhySuprasyPage = () => {
   return (
     <Layout>
-      <div className="bg-white my-10">
-        {/* Hero Section */}
+      {/* Hero Section - Full width */}
+      <div className="-mx-4">
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-indigo-600 to-indigo-400 rounded-3xl">
           <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-4xl sm:text-5xl font-extrabold text-white leading-tight">
@@ -20,36 +20,36 @@ const WhySuprasyPage = () => {
             </p>
           </div>
         </section>
+      </div>
 
-        {/* Section 1: Advanced Features */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              <div>
-                <h3 className="text-3xl font-semibold text-gray-800 mb-4">
-                  Advanced Features
-                </h3>
-                <p className="text-lg text-gray-600">
-                  Suprasy offers a wide range of advanced features to help you
-                  create a powerful and feature-rich online store. From
-                  customizable templates to robust marketing tools, we have
-                  everything you need to succeed.
-                </p>
-              </div>
-              <div className="flex justify-center items-center ">
-                <StaticImage
-                  src="../images/why/a.jpg"
-                  alt="Advanced Features"
-                  className="w-full max-w-md rounded-3xl"
-                ></StaticImage>
-              </div>
-            </div>
+      {/* Section 1: Advanced Features */}
+      <section className="py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div>
+            <h3 className="text-3xl font-semibold text-gray-800 mb-4">
+              Advanced Features
+            </h3>
+            <p className="text-lg text-gray-600">
+              Suprasy offers a wide range of advanced features to help you
+              create a powerful and feature-rich online store. From customizable
+              templates to robust marketing tools, we have everything you need
+              to succeed.
+            </p>
           </div>
-        </section>
+          <div className="flex justify-center items-center ">
+            <StaticImage
+              src="../images/why/a.jpg"
+              alt="Advanced Features"
+              className="w-full max-w-md rounded-3xl"
+            ></StaticImage>
+          </div>
+        </div>
+      </section>
 
-        {/* Section 2: Seamless Integration */}
+      {/* Section 2: Seamless Integration */}
+      <div className="-mx-4">
         <section className="py-20 bg-gray-100 rounded-3xl">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-screen-xl mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               <div className="flex justify-center items-center">
                 <StaticImage
@@ -72,35 +72,35 @@ const WhySuprasyPage = () => {
             </div>
           </div>
         </section>
+      </div>
 
-        {/* Section 3: Exceptional Support */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              <div>
-                <h3 className="text-3xl font-semibold text-gray-800 mb-4">
-                  Exceptional Support
-                </h3>
-                <p className="text-lg text-gray-600">
-                  At Suprasy, we pride ourselves on providing exceptional
-                  customer support. Our dedicated team is available 24/7 to
-                  assist you with any questions or issues you may encounter.
-                </p>
-              </div>
-              <div className="flex justify-center items-center">
-                <StaticImage
-                  src="../images/why/c.jpg"
-                  alt="Advanced Features"
-                  className="w-full max-w-md rounded-3xl"
-                ></StaticImage>
-              </div>
-            </div>
+      {/* Section 3: Exceptional Support */}
+      <section className="py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div>
+            <h3 className="text-3xl font-semibold text-gray-800 mb-4">
+              Exceptional Support
+            </h3>
+            <p className="text-lg text-gray-600">
+              At Suprasy, we pride ourselves on providing exceptional customer
+              support. Our dedicated team is available 24/7 to assist you with
+              any questions or issues you may encounter.
+            </p>
           </div>
-        </section>
+          <div className="flex justify-center items-center">
+            <StaticImage
+              src="../images/why/c.jpg"
+              alt="Advanced Features"
+              className="w-full max-w-md rounded-3xl"
+            ></StaticImage>
+          </div>
+        </div>
+      </section>
 
-        {/* Section 4: Secure Transactions */}
+      {/* Section 4: Secure Transactions */}
+      <div className="-mx-4">
         <section className="py-20 bg-gray-100 rounded-3xl">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-screen-xl mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               <div className="flex justify-center items-center">
                 <StaticImage
@@ -122,36 +122,36 @@ const WhySuprasyPage = () => {
             </div>
           </div>
         </section>
+      </div>
 
-        {/* Section 5: Mobile Responsiveness */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              <div>
-                <h3 className="text-3xl font-semibold text-gray-800 mb-4">
-                  Mobile Responsiveness
-                </h3>
-                <p className="text-lg text-gray-600">
-                  Ensure that your store looks stunning on all devices with
-                  Suprasy's mobile-responsive design. Your customers can enjoy a
-                  seamless shopping experience whether they're on a desktop,
-                  tablet, or smartphone.
-                </p>
-              </div>
-              <div className="flex justify-center items-center">
-                <StaticImage
-                  src="../images/why/e.jpg"
-                  alt="Advanced Features"
-                  className="w-full max-w-md rounded-3xl"
-                ></StaticImage>
-              </div>
-            </div>
+      {/* Section 5: Mobile Responsiveness */}
+      <section className="py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div>
+            <h3 className="text-3xl font-semibold text-gray-800 mb-4">
+              Mobile Responsiveness
+            </h3>
+            <p className="text-lg text-gray-600">
+              Ensure that your store looks stunning on all devices with
+              Suprasy's mobile-responsive design. Your customers can enjoy a
+              seamless shopping experience whether they're on a desktop, tablet,
+              or smartphone.
+            </p>
           </div>
-        </section>
+          <div className="flex justify-center items-center">
+            <StaticImage
+              src="../images/why/e.jpg"
+              alt="Advanced Features"
+              className="w-full max-w-md rounded-3xl"
+            ></StaticImage>
+          </div>
+        </div>
+      </section>
 
-        {/* New Section: Security & Open Source */}
+      {/* New Section: Security & Open Source */}
+      <div className="-mx-4">
         <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-screen-xl mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
                 Built with Security & Openness in Mind
@@ -206,10 +206,12 @@ const WhySuprasyPage = () => {
             </div>
           </div>
         </section>
+      </div>
 
-        {/* New Call to Action Section */}
+      {/* New Call to Action Section */}
+      <div className="-mx-4">
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-indigo-400 rounded-3xl mt-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-white sm:text-4xl mb-6">
               Ready to Build Your Dream Store?
             </h2>
