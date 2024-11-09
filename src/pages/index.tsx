@@ -4,7 +4,15 @@ import Hero from '@/components/Home/Hero';
 import Layout from '@/components/layout/Layout';
 import { Features } from '@/components/Home/Features';
 import { ContainerScroll } from '@/components/ui/container-scroll-animation';
-import { Shield, Github, Palette, ArrowRight } from 'lucide-react';
+import {
+  Shield,
+  Github,
+  Palette,
+  ArrowRight,
+  CheckCircle,
+  Code2,
+  Store,
+} from 'lucide-react';
 import { Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import { StaticImage } from 'gatsby-plugin-image';
@@ -104,6 +112,91 @@ const IndexPage: React.FC<PageProps> = () => {
       </div>
 
       <Features />
+
+      {/* New Targeted Sections */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12">
+            {/* Business Owner Section */}
+            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-8 rounded-2xl">
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="p-2 bg-emerald-100 rounded-lg">
+                  <Store className="w-6 h-6 text-emerald-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">
+                  Business Owners
+                </h3>
+              </div>
+              <p className="text-gray-600 mb-6 text-lg">
+                Ready to grow your business online? Whether you're just starting
+                or expanding your digital presence, we've got everything you
+                need.
+              </p>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-center text-gray-600">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                  Professional themes ready to customize
+                </li>
+                <li className="flex items-center text-gray-600">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                  No technical knowledge required
+                </li>
+                <li className="flex items-center text-gray-600">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                  24/7 security and performance monitoring
+                </li>
+              </ul>
+              <Link
+                to="/themes"
+                className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-emerald-600 hover:bg-emerald-700"
+              >
+                Explore Store Themes
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+            </div>
+            {/* Freelance Developer Section */}
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl">
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="p-2 bg-blue-100 rounded-lg">
+                  <Code2 className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">
+                  Freelance Developers
+                </h3>
+              </div>
+              <p className="text-gray-600 mb-6 text-lg">
+                Focus on what you do best - creating beautiful frontends. Let us
+                handle the complex backend infrastructure.
+              </p>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-center text-gray-600">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                  Complete ecommerce API with documentation
+                </li>
+                <li className="flex items-center text-gray-600">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                  Secure payment processing built-in
+                </li>
+                <li className="flex items-center text-gray-600">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                  Scale projects without infrastructure headaches
+                </li>
+                <li className="flex items-center text-gray-600">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                  Free tier to start building immediately
+                </li>
+              </ul>
+              <Link
+                to="/product"
+                className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-blue-600 hover:bg-blue-700"
+              >
+                View Developer Features
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -237,6 +330,106 @@ const IndexPage: React.FC<PageProps> = () => {
                   Browse Themes
                 </Link>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* New Developer Opportunities Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">
+              Developer Opportunities
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Join our growing ecosystem of developers and earn while building
+              beautiful themes
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Theme Developer Card */}
+            <div className="bg-gradient-to-br from-purple-50 to-indigo-50 p-8 rounded-2xl">
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="p-2 bg-purple-100 rounded-lg">
+                  <Palette className="w-6 h-6 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900">
+                  Theme Developer
+                </h3>
+              </div>
+              <p className="text-gray-600 mb-6">
+                Create and sell your themes on our platform. Earn monthly
+                revenue based on theme usage and help businesses create
+                beautiful online stores.
+              </p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center text-gray-600">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                  Revenue sharing based on theme usage
+                </li>
+                <li className="flex items-center text-gray-600">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                  Access to theme development tools
+                </li>
+                <li className="flex items-center text-gray-600">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                  Theme promotion to our user base
+                </li>
+              </ul>
+              <a
+                href="https://discord.gg/J8xEsQKTqC"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-purple-600 hover:bg-purple-700"
+              >
+                <StaticImage
+                  src="../images/discord.svg"
+                  alt="Discord"
+                  className="w-5 h-5 mr-2"
+                />
+                Partner as Theme Developer
+              </a>
+            </div>
+
+            {/* Frontend Developer Card */}
+            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl">
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="p-2 bg-blue-100 rounded-lg">
+                  <Code2 className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900">
+                  Frontend Developer
+                </h3>
+              </div>
+              <p className="text-gray-600 mb-6">
+                Contribute to our open-source projects, build custom solutions,
+                and grow your expertise in ecommerce development.
+              </p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center text-gray-600">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                  Work with modern tech stack
+                </li>
+                <li className="flex items-center text-gray-600">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                  Open source contributions
+                </li>
+                <li className="flex items-center text-gray-600">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                  Community collaboration
+                </li>
+              </ul>
+              <a
+                href="https://github.com/suprasybd/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-blue-600 hover:bg-blue-700"
+              >
+                <Github className="w-5 h-5 mr-2" />
+                View Open Source Projects
+              </a>
             </div>
           </div>
         </div>

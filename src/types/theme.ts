@@ -6,34 +6,30 @@ export interface Theme {
   Deleted: boolean;
   Owner: string | null;
   R2FolderName: string;
-  Type: string;
-  GithubLink?: string;
-  IsPremium?: boolean;
+  GithubLink: string | null;
+  Type: 'free' | 'paid';
   CreatedAt: string;
   UpdatedAt: string;
 }
 
 export interface ThemeImage {
-  ImageUrl: string;
   Id: number;
+  ThemeId: number;
+  ImageUrl: string;
   CreatedAt: string;
   UpdatedAt: string;
 }
 
-export interface ThemeResponse {
-  Success: boolean;
-  Pagination: {
-    TotalPages: number;
-    Page: number;
-    TotalItems: number;
-    Limit: number;
-  };
-  Message: string;
-  Data: Theme[];
+export interface PaginationInfo {
+  TotalPages: number;
+  Page: number;
+  TotalItems: number;
+  Limit: number;
 }
 
-export interface ThemeImagesResponse {
+export interface ApiResponse<T> {
   Success: boolean;
   Message: string;
-  Data: ThemeImage[];
+  Data: T;
+  Pagination: PaginationInfo;
 }

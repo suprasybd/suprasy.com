@@ -11,9 +11,12 @@ import {
   Sparkles,
   Gift,
 } from 'lucide-react';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const ThemesPage = () => {
-  const { data: themesResponse, isLoading: isLoadingThemes } = useThemes();
+  const [currentPage, setCurrentPage] = React.useState(1);
+  const { data: themesResponse, isLoading: isLoadingThemes } =
+    useThemes(currentPage);
 
   if (isLoadingThemes) {
     return (
@@ -26,6 +29,7 @@ const ThemesPage = () => {
   }
 
   const themes = themesResponse?.Data || [];
+  const pagination = themesResponse?.Pagination;
 
   return (
     <Layout>
@@ -46,12 +50,74 @@ const ThemesPage = () => {
               <ThemeCard
                 key={theme.Id.toString()}
                 theme={{
-                  ...theme,
                   Id: theme.Id.toString(),
+                  Name: theme.Name,
+                  Description: theme.Description,
+                  Type: theme.Type,
+                  GithubLink: theme.GithubLink || undefined,
+                  IsPremium: theme.Type === 'paid',
                 }}
               />
             ))}
           </div>
+
+          {/* Pagination */}
+          {pagination && pagination.TotalPages > 1 && (
+            <div className="flex justify-center items-center space-x-4 mt-12">
+              <button
+                onClick={() => setCurrentPage((prev) => Math.max(1, prev - 1))}
+                disabled={currentPage === 1}
+                className="p-2 rounded-lg border border-gray-300 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+              <span className="text-gray-600">
+                Page {currentPage} of {pagination.TotalPages}
+              </span>
+              <button
+                onClick={() =>
+                  setCurrentPage((prev) =>
+                    Math.min(pagination.TotalPages, prev + 1),
+                  )
+                }
+                disabled={currentPage === pagination.TotalPages}
+                className="p-2 rounded-lg border border-gray-300 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            </div>
+          )}
+
+          {/* Developer CTA Section */}
+          <section className="mt-20 bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-8 text-center">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                Are You a Theme Developer?
+              </h2>
+              <p className="text-gray-600 mb-8">
+                Partner with us to showcase and sell your themes on our
+                platform. Earn monthly revenue based on theme usage and help
+                businesses create beautiful online stores.
+              </p>
+              <a
+                href="https://discord.gg/J8xEsQKTqC"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-indigo-600 hover:bg-indigo-700 transition-colors"
+              >
+                <StaticImage
+                  src="../images/discord.svg"
+                  alt="Discord"
+                  className="w-5 h-5 mr-2"
+                />
+                Join Discord to Partner with Us
+              </a>
+              <p className="mt-4 text-sm text-gray-500">
+                Our theme partners earn competitive revenue shares and get
+                dedicated support for development and distribution.
+              </p>
+            </div>
+          </section>
         </div>
       </div>
     </Layout>

@@ -1,30 +1,24 @@
 import { useQuery } from '@tanstack/react-query';
-import { ApiClient } from '../lib/api-client';
-import { ThemeResponse, ThemeImagesResponse } from '../types/theme';
+import { Theme, ThemeImage, ApiResponse } from '../types/theme';
 
-export const getThemes = async (): Promise<ThemeResponse> => {
-  const response = await ApiClient.get('/themes');
-  return response.data;
-};
+const API_URL = process.env.GATSBY_API_URL;
 
-export const getThemeImages = async (
-  themeId: number,
-): Promise<ThemeImagesResponse> => {
-  const response = await ApiClient.get(`/themes/${themeId}/images`);
-  return response.data;
-};
-
-export const useThemes = () => {
+export const useThemes = (page: number = 1) => {
   return useQuery({
-    queryKey: ['themes'],
-    queryFn: getThemes,
+    queryKey: ['themes', page],
+    queryFn: () =>
+      fetch(`${API_URL}/themes?Page=${page}&Limit=5`).then((res) =>
+        res.json(),
+      ) as Promise<ApiResponse<Theme[]>>,
   });
 };
 
 export const useThemeImages = (themeId: number) => {
   return useQuery({
     queryKey: ['themeImages', themeId],
-    queryFn: () => getThemeImages(themeId),
-    enabled: !!themeId,
+    queryFn: () =>
+      fetch(`${API_URL}/themes/${themeId}/images`).then((res) =>
+        res.json(),
+      ) as Promise<ApiResponse<ThemeImage[]>>,
   });
 };
