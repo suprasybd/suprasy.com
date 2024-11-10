@@ -10,6 +10,7 @@ import {
   ChevronRight,
   Sparkles,
   Gift,
+  Globe2,
 } from 'lucide-react';
 import { StaticImage } from 'gatsby-plugin-image';
 
@@ -55,6 +56,7 @@ const ThemesPage = () => {
                   Description: theme.Description,
                   Type: theme.Type,
                   GithubLink: theme.GithubLink || undefined,
+                  PreviewUrl: theme.PreviewUrl || undefined,
                   IsPremium: theme.Type === 'paid',
                 }}
               />
@@ -133,6 +135,7 @@ const ThemeCard = ({
     Description: string;
     Type: string;
     GithubLink?: string;
+    PreviewUrl?: string;
     IsPremium?: boolean;
   };
 }) => {
@@ -208,6 +211,17 @@ const ThemeCard = ({
             >
               Preview Theme
             </button>
+            {theme.PreviewUrl && (
+              <a
+                href={theme.PreviewUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-white bg-emerald-600 rounded-lg hover:bg-emerald-700 transition-colors w-full"
+              >
+                <Globe2 className="w-4 h-4" />
+                Visit Live Preview
+              </a>
+            )}
             {theme.GithubLink && (
               <a
                 href={theme.GithubLink}
