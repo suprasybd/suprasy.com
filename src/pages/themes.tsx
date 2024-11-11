@@ -63,6 +63,44 @@ const ThemesPage = () => {
             ))}
           </div>
 
+          {/* More Themes Coming Soon */}
+          <div className="mt-16 text-center">
+            <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-8">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-6">
+                <Sparkles className="w-8 h-8 text-indigo-600" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                More Themes Coming Soon
+              </h3>
+              <p className="text-gray-600 max-w-2xl mx-auto mb-6">
+                Our team and community partners are working on new professional
+                themes. Stay tuned for more beautiful designs to make your store
+                stand out.
+              </p>
+              <a
+                href="https://discord.gg/J8xEsQKTqC"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-indigo-600 font-medium hover:text-indigo-700"
+              >
+                Join our Discord for updates
+                <svg
+                  className="w-5 h-5 ml-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
           {/* Pagination */}
           {pagination && pagination.TotalPages > 1 && (
             <div className="flex justify-center items-center space-x-4 mt-12">
