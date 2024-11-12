@@ -19,6 +19,19 @@ import { StaticImage } from 'gatsby-plugin-image';
 import ContactModal from '@/components/layout/ContactModal';
 
 const IndexPage: React.FC<PageProps> = () => {
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+    };
+  }, []);
+
   return (
     <Layout>
       <Helmet>
@@ -100,7 +113,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <Hero />
 
       <div className="py-20">
-        <ContainerScroll titleComponent={<ContainerScrollTitle />}>
+        {isMobile ? (
           <div className="max-w-7xl mx-auto px-4">
             <img
               src="https://static.suprasy.com/scroll-dashboard.png"
@@ -108,7 +121,17 @@ const IndexPage: React.FC<PageProps> = () => {
               className="w-full rounded-2xl shadow-2xl"
             />
           </div>
-        </ContainerScroll>
+        ) : (
+          <ContainerScroll titleComponent={<ContainerScrollTitle />}>
+            <div className="max-w-7xl mx-auto px-4">
+              <img
+                src="https://static.suprasy.com/scroll-dashboard.png"
+                alt="Dashboard Preview"
+                className="w-full rounded-2xl shadow-2xl"
+              />
+            </div>
+          </ContainerScroll>
+        )}
       </div>
 
       <Features />

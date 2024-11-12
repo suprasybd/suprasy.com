@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 lg:pt-32">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div className="max-w-2xl">
+          <div className="max-w-2xl relative z-10">
             {/* Left side content - unchanged */}
             <div className="inline-flex items-center rounded-full px-4 py-1 mb-8 bg-indigo-50 border border-indigo-100">
               <span className="text-sm font-medium text-indigo-600">
@@ -83,18 +83,20 @@ const Hero: React.FC = () => {
               )}
               <Link
                 to="/themes"
-                className="w-full border-2 border-gray-200 hover:border-indigo-100 hover:bg-indigo-50 text-gray-700 font-semibold px-8 py-3 rounded-full flex items-center justify-center"
+                className="w-full border-2 border-gray-200 hover:border-indigo-100 hover:bg-indigo-50 text-gray-700 font-semibold rounded-full"
               >
-                Explore Themes
+                <div className="w-full h-full px-8 py-3 flex items-center justify-center">
+                  Explore Themes
+                </div>
               </Link>
             </div>
           </div>
 
           {/* New Right side - Interactive Feature Grid */}
-          <div className="relative lg:order-1">
+          <div className="relative lg:order-1 mt-24 lg:mt-0">
             <div className="relative z-10 grid grid-cols-2 gap-4 p-4">
               {/* Feature Icons Grid */}
-              <div className="feature-grid-container relative w-full aspect-square">
+              <div className="feature-grid-container relative w-full aspect-square max-w-[400px] mx-auto">
                 {[
                   {
                     icon: <ShoppingCart className="w-8 h-8" />,
@@ -122,11 +124,13 @@ const Hero: React.FC = () => {
                       transform transition-all duration-500 hover:scale-105
                       flex flex-col items-center gap-2
                       animate-float-${index + 1}
+                      sm:w-[calc(50%-1rem)] w-[120px]
                     `}
                     style={{
                       top: `${Math.floor(index / 2) * 33}%`,
                       left: `${(index % 2) * 50}%`,
                       animation: `float ${2 + index * 0.2}s ease-in-out infinite alternate`,
+                      maxWidth: '150px',
                     }}
                   >
                     <div className="text-indigo-600">{item.icon}</div>
@@ -139,8 +143,8 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Decorative elements */}
-            <div className="absolute -top-4 -right-4 w-72 h-72 bg-indigo-50 rounded-full mix-blend-multiply filter blur-2xl opacity-70" />
-            <div className="absolute -bottom-4 -left-4 w-72 h-72 bg-indigo-50 rounded-full mix-blend-multiply filter blur-2xl opacity-70" />
+            <div className="absolute -top-4 -right-4 w-72 h-72 bg-indigo-50 rounded-full mix-blend-multiply filter blur-2xl opacity-50 -z-10" />
+            <div className="absolute -bottom-4 -left-4 w-72 h-72 bg-indigo-50 rounded-full mix-blend-multiply filter blur-2xl opacity-50 -z-10" />
           </div>
         </div>
       </div>
