@@ -72,27 +72,21 @@ const Hero: React.FC = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                variant="default"
-                size="lg"
-                className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-3 rounded-full flex items-center gap-2"
+              {hostName && (
+                <a
+                  href={`${hostName}/register`}
+                  className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-3 rounded-full flex items-center justify-center gap-[8px]"
+                >
+                  <span>Start Free</span>
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+              )}
+              <Link
+                to="/themes"
+                className="w-full border-2 border-gray-200 hover:border-indigo-100 hover:bg-indigo-50 text-gray-700 font-semibold px-8 py-3 rounded-full flex items-center justify-center"
               >
-                {hostName && (
-                  <a
-                    href={`${hostName}/register`}
-                    className="flex items-center gap-2"
-                  >
-                    Start Free <ArrowRight className="w-5 h-5" />
-                  </a>
-                )}
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-2 border-gray-200 hover:border-indigo-100 hover:bg-indigo-50 text-gray-700 font-semibold px-8 py-3 rounded-full"
-              >
-                <Link to="/themes">Explore Themes</Link>
-              </Button>
+                Explore Themes
+              </Link>
             </div>
           </div>
 
