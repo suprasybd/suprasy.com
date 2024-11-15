@@ -36,7 +36,7 @@ const Header: React.FC = () => {
                     variant="default"
                     className="rounded-xl shadow-sm w-full"
                   >
-                    Start Free
+                    Sign Up
                   </Button>
                 </a>
               </>
@@ -177,7 +177,7 @@ const Header: React.FC = () => {
                             className="w-full py-6 text-lg rounded-xl"
                             onClick={() => setIsMenuOpen(false)}
                           >
-                            Start Free
+                            Sign Up
                           </Button>
                         </a>
                         <a href={`${hostName}/login`} className="w-full">
