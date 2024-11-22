@@ -3,10 +3,13 @@ import { Button } from '../ui/button';
 import { useHostname } from '../../hooks/HostnameHook';
 import { Link } from 'gatsby';
 import { Menu, X } from 'lucide-react';
+import AuthModal from '../layout/AuthModal';
 
 const Header: React.FC = () => {
   const [hostName] = useHostname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [isSignupModalOpen, setIsSignupModalOpen] = useState(false);
 
   return (
     <header className="fixed w-full top-4 left-0 right-0 z-50">
@@ -23,22 +26,32 @@ const Header: React.FC = () => {
           <div className="hidden lg:flex gap-3 items-center lg:order-2">
             {hostName && (
               <>
-                <a href={`${hostName}/login`} className="w-full">
-                  <Button
-                    variant="ghost"
-                    className="rounded-xl hover:bg-gray-100/50 w-full"
-                  >
-                    Login
-                  </Button>
-                </a>
-                <a href={`${hostName}/register`} className="w-full">
-                  <Button
-                    variant="default"
-                    className="rounded-xl shadow-sm w-full"
-                  >
-                    Sign Up
-                  </Button>
-                </a>
+                <Button
+                  variant="ghost"
+                  className="rounded-xl hover:bg-gray-100/50 w-full"
+                  onClick={() => setIsLoginModalOpen(true)}
+                >
+                  Login
+                </Button>
+                <Button
+                  variant="default"
+                  className="rounded-xl shadow-sm w-full"
+                  onClick={() => setIsSignupModalOpen(true)}
+                >
+                  Sign Up
+                </Button>
+                <AuthModal
+                  isOpen={isLoginModalOpen}
+                  setIsOpen={setIsLoginModalOpen}
+                  type="login"
+                  hostName={hostName}
+                />
+                <AuthModal
+                  isOpen={isSignupModalOpen}
+                  setIsOpen={setIsSignupModalOpen}
+                  type="signup"
+                  hostName={hostName}
+                />
               </>
             )}
           </div>
@@ -171,24 +184,20 @@ const Header: React.FC = () => {
                   <div className="grid gap-3">
                     {hostName && (
                       <>
-                        <a href={`${hostName}/register`} className="w-full">
-                          <Button
-                            variant="default"
-                            className="w-full py-6 text-lg rounded-xl"
-                            onClick={() => setIsMenuOpen(false)}
-                          >
-                            Sign Up
-                          </Button>
-                        </a>
-                        <a href={`${hostName}/login`} className="w-full">
-                          <Button
-                            variant="ghost"
-                            className="w-full py-6 text-lg rounded-xl"
-                            onClick={() => setIsMenuOpen(false)}
-                          >
-                            Login
-                          </Button>
-                        </a>
+                        <Button
+                          variant="default"
+                          className="w-full py-6 text-lg rounded-xl"
+                          onClick={() => setIsSignupModalOpen(true)}
+                        >
+                          Sign Up
+                        </Button>
+                        <Button
+                          variant="ghost"
+                          className="w-full py-6 text-lg rounded-xl"
+                          onClick={() => setIsLoginModalOpen(true)}
+                        >
+                          Login
+                        </Button>
                       </>
                     )}
                   </div>

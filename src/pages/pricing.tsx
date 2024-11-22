@@ -4,6 +4,7 @@ import { useHostname } from '../hooks/HostnameHook';
 import React from 'react';
 import { usePlans } from '../hooks/usePlans';
 import { Plan } from '../types/plan';
+import AuthModal from '@/components/layout/AuthModal';
 
 const PricingPage = () => {
   const [hostName] = useHostname();
@@ -101,6 +102,7 @@ const PLAN_INFO: Record<string, PlanInfo> = {
 };
 
 const PricingCard: React.FC<PricingCardProps> = ({ plan, hostName }) => {
+  const [isAuthModalOpen, setIsAuthModalOpen] = React.useState(false);
   const features: string[] = JSON.parse(plan.Features);
   const isEnterprise = plan.Name === 'enterprise';
 
@@ -167,17 +169,25 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan, hostName }) => {
       </div>
 
       {hostName && !isEnterprise && (
-        <a
-          className={`mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium transition-colors
-            ${
-              planInfo.recommended
-                ? 'bg-emerald-500 text-white hover:bg-emerald-600'
-                : 'bg-gray-50 text-gray-900 hover:bg-gray-100 border-gray-200'
-            }`}
-          href={`${hostName}/register`}
-        >
-          {plan.MonthlyPrice === 0 ? 'Start Free' : 'Get Started'}
-        </a>
+        <>
+          <button
+            className={`mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium transition-colors
+              ${
+                planInfo.recommended
+                  ? 'bg-emerald-500 text-white hover:bg-emerald-600'
+                  : 'bg-gray-50 text-gray-900 hover:bg-gray-100 border-gray-200'
+              }`}
+            onClick={() => setIsAuthModalOpen(true)}
+          >
+            {plan.MonthlyPrice === 0 ? 'Start Free' : 'Get Started'}
+          </button>
+          <AuthModal
+            isOpen={isAuthModalOpen}
+            setIsOpen={setIsAuthModalOpen}
+            type="signup"
+            hostName={hostName}
+          />
+        </>
       )}
       {isEnterprise && (
         <a

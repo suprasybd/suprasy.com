@@ -14,9 +14,11 @@ import {
   BarChart3,
   Settings,
 } from 'lucide-react';
+import AuthModal from '../layout/AuthModal';
 
 const Hero: React.FC = () => {
   const [hostName] = useHostname();
+  const [isAuthModalOpen, setIsAuthModalOpen] = React.useState(false);
 
   const highlights = [
     {
@@ -73,13 +75,21 @@ const Hero: React.FC = () => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               {hostName && (
-                <a
-                  href={`${hostName}/register`}
-                  className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-3 rounded-full flex items-center justify-center gap-[8px]"
-                >
-                  <span>Sign Up Free</span>
-                  <ArrowRight className="w-5 h-5" />
-                </a>
+                <>
+                  <button
+                    onClick={() => setIsAuthModalOpen(true)}
+                    className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-3 rounded-full flex items-center justify-center gap-[8px]"
+                  >
+                    <span>Sign Up Free</span>
+                    <ArrowRight className="w-5 h-5" />
+                  </button>
+                  <AuthModal
+                    isOpen={isAuthModalOpen}
+                    setIsOpen={setIsAuthModalOpen}
+                    type="signup"
+                    hostName={hostName}
+                  />
+                </>
               )}
               <Link
                 to="/themes"
