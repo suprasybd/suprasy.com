@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import ContactModal from '../layout/ContactModal';
+import { Facebook, Linkedin, Youtube } from 'lucide-react';
 
 const Footer = () => {
   const [isContactModalOpen, setIsContactModalOpen] = React.useState(false);
@@ -39,6 +40,58 @@ const Footer = () => {
                       </svg>
                       Join our early access program
                     </span>
+                  </div>
+
+                  <div className="flex items-center text-sm text-gray-500">
+                    <svg
+                      className="mr-2 h-4 w-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                      />
+                    </svg>
+                    <a
+                      href="tel:+8801977235665"
+                      className="hover:text-indigo-600"
+                    >
+                      +880 1977-235665
+                    </a>
+                  </div>
+
+                  <div className="flex items-center space-x-4">
+                    <a
+                      href="https://www.linkedin.com/company/suprasy"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-500 hover:text-indigo-600 transition-colors flex items-center gap-2"
+                    >
+                      <Linkedin className="w-5 h-5" />
+                      <span className="text-sm">LinkedIn</span>
+                    </a>
+                    <a
+                      href="https://www.facebook.com/suprasy.com.bd"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-500 hover:text-indigo-600 transition-colors flex items-center gap-2"
+                    >
+                      <Facebook className="w-5 h-5" />
+                      <span className="text-sm">Facebook</span>
+                    </a>
+                    <a
+                      href="https://www.youtube.com/@suprasy"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-500 hover:text-indigo-600 transition-colors flex items-center gap-2"
+                    >
+                      <Youtube className="w-5 h-5" />
+                      <span className="text-sm">YouTube</span>
+                    </a>
                   </div>
 
                   <button
