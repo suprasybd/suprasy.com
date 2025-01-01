@@ -5,10 +5,14 @@ import React from 'react';
 import { usePlans } from '../hooks/usePlans';
 import { Plan } from '../types/plan';
 import AuthModal from '@/components/layout/AuthModal';
+import ContactModal from '@/components/layout/ContactModal';
+import Service from '@/components/Pricing/Service';
 
 const PricingPage = () => {
   const [hostName] = useHostname();
   const { data: plansResponse, isLoading, error } = usePlans();
+  const [isAuthModalOpen, setIsAuthModalOpen] = React.useState(false);
+  const [isContactModalOpen, setIsContactModalOpen] = React.useState(false);
 
   if (isLoading) {
     return (
@@ -56,8 +60,16 @@ const PricingPage = () => {
           ))}
         </div>
 
+        {/* Additional Services */}
+        <Service setIsContactModalOpen={setIsContactModalOpen} />
+
         {/* faq */}
         <FaqPricing />
+
+        <ContactModal
+          isOpen={isContactModalOpen}
+          setIsOpen={setIsContactModalOpen}
+        />
       </div>
     </Layout>
   );
