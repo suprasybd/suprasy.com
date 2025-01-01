@@ -138,12 +138,12 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* <div className="flex justify-center items-center ">
+        <div className="flex justify-center items-center ">
           <StaticImage
             src="../../images/ssl.jpg"
             alt="SSL Commerz"
           ></StaticImage>
-        </div> */}
+        </div>
 
         <div className="text-center p-3 rounded-md ">
           © 2024 Suprasy | All right reserved
